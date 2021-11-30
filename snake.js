@@ -17,7 +17,8 @@ export function update() {
 
 export function draw(gameBoard) {
     snakeBody.forEach((segment) => {
-        const snakeElement = document.createElement("div")
+        const snakeElement = document.createElement("img")
+        snakeElement.setAttribute("src", "assets/boba" + (Math.floor(Math.random() * 3) + 1) + ".png");
         snakeElement.style.gridRowStart = segment.y
         snakeElement.style.gridColumnStart = segment.x
         snakeElement.classList.add("boba")
