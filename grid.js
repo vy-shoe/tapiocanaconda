@@ -9,9 +9,9 @@ export function randomGridPosition() {
 
 export function isOutsideGrid(position) {
     return (
-        position.x < 0 ||
+        position.x <= 0 ||
         position.x > GRID_SIZE ||
-        position.y < 0 ||
+        position.y <= 0 ||
         position.y > GRID_SIZE
     );
 }
