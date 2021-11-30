@@ -1,5 +1,6 @@
-const GRID_SIZE = 20;
+const GRID_SIZE = 20; //size of the square grid
 
+//get a random grid position within bounds
 export function randomGridPosition() {
     return {
         x: Math.floor(Math.random() * GRID_SIZE) + 1,
@@ -7,6 +8,7 @@ export function randomGridPosition() {
     };
 }
 
+//check if the position param is within the grid bounds of the game- will return boolean
 export function isOutsideGrid(position) {
     return (
         position.x <= 0 ||
