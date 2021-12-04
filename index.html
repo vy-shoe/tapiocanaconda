@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css">
+
         <title>Tapioca Anaconda</title>
         <style>
             body {
@@ -13,6 +16,7 @@
                 justify-content: center;
                 align-items: center;
                 margin: 0 auto;
+                margin-left: 100;
                 background-color: black;
             }
 
@@ -45,8 +49,34 @@
             }
         </style>
         <script src="game.js" defer type="module"></script>
+        <script>src="snake.js"</script>
     </head>
     <body>
         <div id="game-board"></div>
+
+        <!-- Add music -->
+        <div class="musicPlayer">
+            <img src="assets/musicIcon.png" id="icon">
+        </div>
+
+        <audio id="mySong" autoplay loop>
+            <source src="assets/Pharrell Happy  8bit  MIDI version.mp3" type="audio/mp3">
+        </audio>
+
+        <script>
+            var mySong = document.getElementById("mySong");
+            mySong.volume = .1;
+            var icon = document.getElementById("icon");
+            icon.onclick = function() {
+               if (mySong.paused) { 
+                   mySong.play();
+                   icon.src = "assets/musicIcon_pause.png";
+               } else {
+                   mySong.pause();
+                   icon.src = "assets/musicIcon.png";
+               }
+            }
+        </script>
     </body>
 </html>
+ 

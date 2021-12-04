@@ -12,7 +12,7 @@ let lastRenderTime = 0; //time since previously rendered (sets frame rate)
 let gameOver = false; //boolean if game is over
 const gameBoard = document.getElementById("game-board"); //gets gameboard's html
 
-// main function to run to run the game- draws the animations and checks the time + gameover to make sure we still keep drawing
+// main function to run the game- draws the animations and checks the time + gameover to make sure we still keep drawing
 function main(currentTime) {
     if (gameOver) {
         if (confirm("Game Over. Press OK to restart")) {
@@ -51,3 +51,6 @@ function draw() {
 function checkDeath() {
     gameOver = isOutsideGrid(getSnakeHead()) || ifSnakeIntersects();
 }
+
+
+

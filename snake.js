@@ -15,6 +15,7 @@ export function update() {
     snakeBody[0].y += inputDirection.y;
 }
 
+
 export function draw(gameBoard) {
     snakeBody.forEach((segment) => {
         const snakeElement = document.createElement("img");
@@ -30,6 +31,8 @@ export function draw(gameBoard) {
         gameBoard.appendChild(snakeElement);
     });
 }
+
+
 
 export function expandSnake(amount) {
     newSegments += amount;
@@ -62,3 +65,5 @@ export function getSnakeHead() {
 export function ifSnakeIntersects() {
     return onSnake(snakeBody[0], { ignoreHead: true });
 }
+
+

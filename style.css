@@ -1,0 +1,30 @@
+.musicPlayer {
+	margin-top: 45%;
+	padding: 10px;
+}
+
+.content {
+	width: 100%;
+	position: absolute;
+	top: 4%;
+	margin: auto;
+	display: flex;
+}
+
+.left-col {
+	margin-left: 5.5%;
+	display: inline-flex;
+	padding: 10px;
+}
+
+.left-col h5 {
+	font-size: 20px;
+	color: #ffff;
+	line-height: 20px;
+	float: left;
+}
+
+#icon {
+	width: 60px;
+	cursor: pointer;
+}
