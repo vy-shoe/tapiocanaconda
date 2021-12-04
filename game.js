@@ -21,7 +21,8 @@ function main(currentTime) {
         mySong.pause();
         icon.src = "assets/musicIcon.png";
         if (confirm("Game Over. Press OK to restart")) {
-            window.location = "/"; // current location of website, acts as refresh
+            location.reload();
+            // window.location = "/"; // current location of website, acts as refresh
         }
         return;
     }
