@@ -11,14 +11,19 @@ import { isOutsideGrid } from "./grid.js";
 let lastRenderTime = 0; //time since previously rendered (sets frame rate)
 let gameOver = false; //boolean if game is over
 const gameBoard = document.getElementById("game-board"); //gets gameboard's html
+var icon = document.getElementById("icon");
+var mySong = document.getElementById("mySong");
+mySong.volume = 0.1;
 
 // main function to run the game- draws the animations and checks the time + gameover to make sure we still keep drawing
 function main(currentTime) {
     if (gameOver) {
+        mySong.pause();
+        icon.src = "assets/musicIcon.png";
         if (confirm("Game Over. Press OK to restart")) {
-            window.location = '/' // current location of website, acts as refresh
+            window.location = "/"; // current location of website, acts as refresh
         }
-        return
+        return;
     }
 
     window.requestAnimationFrame(main);
@@ -51,6 +56,3 @@ function draw() {
 function checkDeath() {
     gameOver = isOutsideGrid(getSnakeHead()) || ifSnakeIntersects();
 }
-
-
-
