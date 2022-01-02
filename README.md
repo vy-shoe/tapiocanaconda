@@ -15,7 +15,7 @@ Taylor helped out with organization of the team and meeting deadlines.
 Gerhardt was the team coordinator and helped code the music functionality.
 
 
-##Play the game 
+## Play the game 
 To play the game, the player must simply use the arrow keys on their keyboard to direct the snake. The player moves the snake and searches for cups of boba tea so that it can become longer. If the player makes the snake run into itself or any of the walls then the game is over.
 
 Link here: https://vy-shoe.github.io/tapiocanaconda/
